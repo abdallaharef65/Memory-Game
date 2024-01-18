@@ -1,0 +1,440 @@
+.container {
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px auto;
+    font-size: 16px;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+.MemoryGameBoxs {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(50px, 1fr));
+    row-gap: 5px;
+    column-gap: 5px;
+    position: relative;
+}
+
+.Box {
+    margin: 5px auto;
+    width: 45px;
+    height: 45px;
+    text-align: center;
+    line-height: 200px;
+    transition: transform 1s;
+    transform-style: preserve-3d;
+    cursor: pointer;
+    position: relative;
+    border: solid #000000 5px;
+}
+
+i {
+    font-size: 35px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@media (min-width: 576px) {
+    .container {
+        width: 540px;
+
+    }
+
+    .MemoryGameBoxs {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(50px, 1fr));
+        row-gap: 5px;
+        column-gap: 5px;
+        position: relative;
+    }
+
+    .Box {
+        margin: 5px auto;
+        width: 45px;
+        height: 45px;
+        text-align: center;
+        line-height: 200px;
+        transition: transform 1s;
+        transform-style: preserve-3d;
+        cursor: pointer;
+        position: relative;
+        border: solid #000000 3px;
+    }
+
+    i {
+        font-size: 50px;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .ButtonWin {
+        font-size: 40px;
+    }
+
+}
+
+@media (min-width: 768px) {
+    .container {
+        width: 750px;
+    }
+
+    .MemoryGameBoxs {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+        row-gap: 10px;
+        column-gap: 5px;
+        position: relative;
+    }
+
+    .Box {
+        margin: 5px auto;
+        width: 95px;
+        height: 95px;
+        text-align: center;
+        line-height: 200px;
+        transition: transform 1s;
+        transform-style: preserve-3d;
+        cursor: pointer;
+        position: relative;
+        border: solid #000000 5px;
+    }
+
+    i {
+        font-size: 100px;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .ButtonWin {
+        font-size: 40px;
+    }
+
+
+
+
+}
+
+@media (min-width: 1200px) {
+    .container {
+        width: 970px;
+    }
+
+    .MemoryGameBoxs {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(125px, 1fr));
+        row-gap: 10px;
+        column-gap: 5px;
+        position: relative;
+    }
+
+    .Box {
+        margin: 5px auto;
+        width: 120px;
+        height: 120px;
+        text-align: center;
+        line-height: 200px;
+        transition: transform 1s;
+        transform-style: preserve-3d;
+        cursor: pointer;
+        position: relative;
+        border: solid #000000 5px;
+    }
+
+    i {
+        font-size: 105px;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+
+@media (min-width: 1400px) {
+    .container {
+        width: 1370px;
+    }
+}
+
+.container {
+    /* background-color: aqua; */
+}
+
+.HeaderGame {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    border: solid #000000 3px;
+    margin-top: 50px;
+    padding: 10px 10px 10px 10px;
+}
+
+
+.Box .frontBox {
+    /* background-color: #525a5d; */
+    color: #000000;
+    /* font-size: 100px; */
+}
+
+.Box .BackBox {
+    color: #E36414;
+    /* background-color: #8d9395; */
+    transform: rotateY(180deg);
+}
+
+
+
+.Box .face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    backface-visibility: hidden;
+    /* border: 5px solid #2196F3; */
+
+}
+
+.MemoryGameBoxs .Box.isFlipped {
+    transform: rotateY(180deg);
+}
+
+.MemoryGameBoxs .Box.quickLook {
+    transform: rotateY(180deg);
+}
+
+.Matched {
+    transform: rotateY(180deg);
+    pointer-events: none;
+}
+
+.startGame:before {
+    content: '';
+    position: absolute;
+    background-color: #aaaaaa;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    right: 0;
+    opacity: 0.8;
+}
+
+
+.startGame p {
+    border: solid #ffffff 3px;
+    transition: background-color 0.5s ease;
+    background-color: white;
+    font-size: 28px;
+    padding: 10px 20px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 11;
+}
+
+.startGame p:hover {
+
+    background-color: #595959;
+    cursor: pointer;
+    color: rgb(255, 255, 255);
+
+}
+
+.MemoryGameBoxs.noClicking {
+    pointer-events: none;
+}
+
+
+
+.fa-steam {
+    color: #304969;
+}
+
+.fa-google-play {
+    color: #4aaa4d;
+}
+
+.fa-windows {
+    color: #00a8e8;
+
+}
+
+.fa-linkedin {
+    color: #006394;
+}
+
+.fa-square-instagram {
+    color: #f20d9e;
+}
+
+.fa-facebook {
+    color: #3a5794;
+}
+
+.fa-tiktok {
+    color: #380023;
+}
+
+.fa-youtube {
+    color: #f70000;
+}
+
+.fa-paypal {
+    color: #002c86;
+}
+
+.fa-shopify {
+    color: #70ae27;
+}
+
+.fa-twitter {
+    color: #4da6e9;
+}
+
+.fa-discord {
+    color: #5562ea;
+}
+
+.fa-apple {
+    color: #c2c0c1;
+}
+
+.fa-google {
+    color: #f3b500;
+}
+
+.fa-telegram {
+    color: #61a4d5;
+}
+
+.fa-android {
+    color: #a5bb46;
+}
+
+.fa-react {
+    color: #5ed3f3;
+}
+
+.fa-square-js {
+    color: #ffcb23;
+}
+
+.fa-twitch {
+    color: #8c44f7;
+}
+
+.fa-skype {
+    color: #00aae8;
+}
+
+
+.styled-button {
+    margin: 5px 0px;
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    border: 2px solid #3498db;
+    /* Border color */
+    color: #3498db;
+    /* Text color */
+    background-color: #fff;
+    /* Background color */
+    border-radius: 5px;
+    /* Rounded corners */
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Hover effect */
+.styled-button:hover {
+    background-color: #3498db;
+    /* Background color on hover */
+    color: #fff;
+    /* Text color on hover */
+}
+
+.levelGame {
+    content: '';
+    position: absolute;
+    background-color: #595959;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    right: 0;
+    opacity: 0.8;
+}
+
+.levelGame .levelButton {
+    transition: background-color 0.5s ease;
+    /* background-color: white; */
+    font-size: 28px;
+    padding: 10px 20px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 11;
+}
+
+
+.levelGame .levelButton div button {
+    margin: 5px 0px;
+    min-width: 100%;
+
+    border: solid #ffffff 3px;
+    transition: background-color 0.5s ease;
+    background-color: white;
+    font-size: 28px;
+    padding: 10px 20px;
+}
+
+.levelGame .levelButton div button:hover {
+
+    background-color: #595959;
+    cursor: pointer;
+    color: rgb(255, 255, 255);
+
+}
+
+.win {
+    content: '';
+    position: absolute;
+    background-color: #000000;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    right: 0;
+    opacity: 0.8;
+}
+
+.ButtonWin {
+    transition: background-color 0.5s ease;
+    background-color: rgb(255, 255, 255);
+    font-size: 60px;
+    padding: 10px 20px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 11;
+    color: rgb(0, 0, 0);
+    font-weight: 800;
+    opacity: 1;
+
+}
